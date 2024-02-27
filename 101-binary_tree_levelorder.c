@@ -8,8 +8,8 @@
 
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
-	int SIZE = 256;
-	binary_tree_t **array = malloc(sizeof array * SIZE);
+	int SIZE = 512;
+	binary_tree_t **array = malloc(sizeof(array) * SIZE);
 	int head = 1;
 	int tail = 0;
 	int size = 1;
