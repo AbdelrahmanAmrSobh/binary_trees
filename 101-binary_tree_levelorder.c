@@ -8,7 +8,7 @@
 
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 {
-	const int SIZE = 256;
+	int SIZE = 256;
 	binary_tree_t *array[SIZE];
 	int head = 1;
 	int tail = 0;
