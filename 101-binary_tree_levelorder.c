@@ -26,13 +26,13 @@ void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int))
 			head = (head + 1) % SIZE;
 			array[head] = array[tail]->right;
 			head = (head + 1) % SIZE;
-			size += 1;
+			size++;
 		}
+		tail = (tail + 1) % SIZE;
 		while (size && !array[tail])
 		{
 			tail = (tail + 1) % SIZE;
 			size--;
 		}
-		tail = (tail + 1) % SIZE;
 	}
 }
