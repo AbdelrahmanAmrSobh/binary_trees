@@ -25,11 +25,11 @@ int max(const binary_tree_t *tree, int supposed_max)
 
 int min(const binary_tree_t *tree, int supposed_min)
 {
-        if (!tree)
-                return (1);
-        if (tree->n <= supposed_min)
-                return (0);
-        return (min(tree->left, supposed_min) & min(tree->right, supposed_min));
+	if (!tree)
+		return (1);
+	if (tree->n <= supposed_min)
+		return (0);
+	return (min(tree->left, supposed_min) & min(tree->right, supposed_min));
 }
 
 /**
@@ -45,7 +45,7 @@ int binary_tree_is_bst(const binary_tree_t *tree)
 	if (!max(tree->left, tree->n))
 		return (0);
 	if (!min(tree->right, tree->n))
-                return (0);
+		return (0);
 	if (tree->left && tree->right)
 		return (binary_tree_is_bst(tree->left) & binary_tree_is_bst(tree->right));
 	if (tree->left)
