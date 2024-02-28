@@ -1,0 +1,101 @@
+[33mcommit e9accd22db04c2c5d9f2035284a48a8995528532[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Wed Feb 28 03:53:25 2024 -0800
+
+    Big O and add delete node
+
+[33mcommit eec4a794577455c9a92b72bd5ecebaaa83358cac[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Wed Feb 28 02:35:43 2024 -0800
+
+    Add array to bst and search bst
+
+[33mcommit 1299a89b3b930352207dc3ea453a6b3541c292fc[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Wed Feb 28 01:39:03 2024 -0800
+
+    Insert in bst
+
+[33mcommit e57dad2696070b409613047f0da79b92c58b186c[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Wed Feb 28 00:54:13 2024 -0800
+
+    fix betty
+
+[33mcommit e50206e796f90aa8b157b5013b6f9e46a7ff47eb[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Wed Feb 28 00:52:29 2024 -0800
+
+    fix bug
+
+[33mcommit 70edee55adb413f97d5b29e14533d3ec109e0574[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Wed Feb 28 00:48:56 2024 -0800
+
+    Add bst check
+
+[33mcommit e34b9119507b02b9f3cb05ee7267a8331db3e0b2[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Wed Feb 28 00:21:47 2024 -0800
+
+    Allow rotation
+
+[33mcommit 06527aa376ea90d5300f3acd7029e6b54fb415b5[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Tue Feb 27 15:11:52 2024 -0800
+
+    Add function to check if binary tree is complete
+
+[33mcommit 2ee1e31cd9fd2cea4c68bfd5840af3053a774535[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Tue Feb 27 12:11:09 2024 -0800
+
+    Change logic
+
+[33mcommit 20529e1613a40efd3a08df3dece9f4c46de1146c[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Tue Feb 27 12:02:30 2024 -0800
+
+    increase size of array && fix betty
+
+[33mcommit 77e97bcb3a70142114ad299c1d004564b508fe16[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Tue Feb 27 12:00:01 2024 -0800
+
+    change array, assign now with malloc
+
+[33mcommit e2718d54dfb6928f64e0d5e5304c4a6ba1d3c292[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Tue Feb 27 11:23:38 2024 -0800
+
+    Fix requirement
+
+[33mcommit 2052bc8eb6d9d6e793d0c8e5d09162c6fe4f65ba[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Tue Feb 27 11:02:05 2024 -0800
+
+    Bug fix
+
+[33mcommit 054043ec2afd86ba2f256f82e9d516474037e842[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Tue Feb 27 10:48:07 2024 -0800
+
+    Add files
+
+[33mcommit 03b0a21d2f029fee425685683a90c45875ec509b[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Tue Feb 27 00:51:00 2024 -0800
+
+    Fix
+
+[33mcommit f74f7905496a96e58da0e425bd66e220c6920ec5[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Tue Feb 27 00:46:32 2024 -0800
+
+    Fix an Error, needed check if function was not NULL
+
+[33mcommit aefa0874027de3fc0df3e35079b74fc4b4d2b1b3[m
+Author: Abdelrahman <abdelrahmanamr.egypt@gmail.com>
+Date:   Mon Feb 26 15:35:43 2024 -0800
+
+    Add binary tree
