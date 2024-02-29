@@ -41,22 +41,28 @@ avl_t *avl_insert(avl_t **tree, int value)
 
 	while (going_up)
 	{
-		if (balance > 1 && value < going_up->left->n)
-			going_up = binary_tree_rotate_right(going_up);
-		if (balance < -1 && value > going_up->right->n)
-			going_up = binary_tree_rotate_left(going_up);
-		if (balance > 1 && value > going_up->left->n)
-		{
-			going_up->left = binary_tree_rotate_left(going_up->left);
-			going_up = binary_tree_rotate_right(going_up);
-		}
-		if (balance < -1 && value < going_up->right->n)
-		{
-			going_up->right = binary_tree_rotate_right(going_up->right);
-			going_up = binary_tree_rotate_left(going_up);
-		}
-		if (!balance || balance == 1 || balance == -1)
+		if (1 >= balance && balance >= -1)
 			going_up = going_up->parent;
+		else if (balance == 2)
+		{
+			if (going_up->left->n > value)
+				binary_tree_rotate_right(going_up);
+			else
+			{
+				binary_tree_rotate_left(going_up->left);
+				binary_tree_rotate_right(going_up);
+			}
+		}
+		else
+		{
+			if (going_up->right->n > value)
+				binary_tree_rotate_left(going_up->right);
+			else
+			{
+				binary_tree_rotate_right(going_up->right);
+				binary_tree_rotate_left(going_up);
+			}
+		}
 		balance = binary_tree_balance(going_up);
 	}
 	return (new_node);
