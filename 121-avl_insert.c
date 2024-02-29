@@ -55,7 +55,8 @@ avl_t *avl_insert(avl_t **tree, int value)
 			going_up->right = binary_tree_rotate_right(going_up->right);
 			going_up = binary_tree_rotate_left(going_up);
 		}
-		going_up = going_up->parent;
+		if (!balance || balance == 1 || balance == -1)
+			going_up = going_up->parent;
 		balance = binary_tree_balance(going_up);
 	}
 	return (new_node);
