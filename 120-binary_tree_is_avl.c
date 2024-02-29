@@ -1,38 +1,6 @@
 #include "binary_trees.h"
 
 /**
- * max - check if supposed max is actually max
- * @tree: given tree
- * @supposed_max: supposed max in tree
- * Return: 1 or 0 true or false
-*/
-
-int max(const binary_tree_t *tree, int supposed_max)
-{
-	if (!tree)
-		return (1);
-	if (tree->n >= supposed_max)
-		return (0);
-	return (max(tree->left, supposed_max) & max(tree->right, supposed_max));
-}
-
-/**
- * min - check if supposed min is actually min
- * @tree: given tree
- * @supposed_min: supposed min in tree
- * Return: 1 or 0 true or false
-*/
-
-int min(const binary_tree_t *tree, int supposed_min)
-{
-	if (!tree)
-		return (1);
-	if (tree->n <= supposed_min)
-		return (0);
-	return (min(tree->left, supposed_min) & min(tree->right, supposed_min));
-}
-
-/**
  * get_depth - calculate depth of left and right
  * @tree: current node
  * Return: max depth of current node
@@ -69,19 +37,57 @@ int binary_tree_balance(const binary_tree_t *tree)
 }
 
 /**
- * binary_tree_is_avl - check if given tree is avl tree
+ * max - check if supposed max is actually max
  * @tree: given tree
- * Return: true or false 1 for true 0 for false
+ * @supposed_max: supposed max in tree
+ * Return: 1 or 0 true or false
 */
 
-int binary_tree_is_avl(const binary_tree_t *tree)
+int max(const binary_tree_t *tree, int supposed_max)
 {
 	int balance = binary_tree_balance(tree);
 
+	if (!tree)
+		return (1);
+	if (tree->n >= supposed_max)
+		return (0);
 	if (balance > 1)
 		return (0);
 	if (balance < -1)
 		return (0);
+	return (max(tree->left, supposed_max) & max(tree->right, supposed_max));
+}
+
+/**
+ * min - check if supposed min is actually min
+ * @tree: given tree
+ * @supposed_min: supposed min in tree
+ * Return: 1 or 0 true or false
+*/
+
+int min(const binary_tree_t *tree, int supposed_min)
+{
+	int balance = binary_tree_balance(tree);
+
+	if (!tree)
+		return (1);
+	if (tree->n <= supposed_min)
+		return (0);
+	if (balance > 1)
+		return (0);
+	if (balance < -1)
+		return (0);
+	return (min(tree->left, supposed_min) & min(tree->right, supposed_min));
+}
+
+/**
+ * binary_tree_is_avl - check if tree is avl
+ * @tree: given tree
+ * Return: 1 for true 0 for false
+*/
+
+int binary_tree_is_avl(const binary_tree_t *tree)
+{
 	if (!tree)
 		return (0);
 	if (!max(tree->left, tree->n))
