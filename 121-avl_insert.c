@@ -36,7 +36,7 @@ bst_t *bst_insert(bst_t **tree, int value)
 avl_t *avl_insert(avl_t **tree, int value)
 {
 	avl_t *new_node = bst_insert(tree, value);
-	avl_t *going_up = new_node->parent;
+	avl_t *going_up = new_node ? new_node->parent : NULL;
 	int balance = binary_tree_balance(going_up);
 
 	while (going_up)
