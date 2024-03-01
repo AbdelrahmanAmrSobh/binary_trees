@@ -30,9 +30,10 @@ bst_t *bst_insert(bst_t **tree, int value)
  * reBalancing - rebalance tree
  * @tree: given tree
  * @new_node: node added to tree
+ * @value: value of new node
 */
 
-void reBalancing(avl_t **tree, avl_t *new_node)
+void reBalancing(avl_t **tree, avl_t *new_node, int value)
 {
 	avl_t *going_up = new_node ? new_node->parent : NULL;
 	avl_t *save_point = going_up;
@@ -80,6 +81,6 @@ avl_t *avl_insert(avl_t **tree, int value)
 {
 	avl_t *new_node = bst_insert(tree, value);
 
-	reBalancing(tree, new_node);
+	reBalancing(tree, new_node, value);
 	return (new_node);
 }
